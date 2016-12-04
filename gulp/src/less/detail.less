@@ -1,0 +1,35 @@
+/**
+ * demo详情页公用样式表
+ */
+
+@import url('./sidebar');
+@import url('./footer');
+
+
+.sidebar{
+    background: rgba(0,0,0,0.7);
+}
+.footer{
+	display: none;
+}
+.container {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .show-case {
+  -ms-flex: 30;
+      flex: 30;
+  height: 100%;
+}
+.container .show-case .modules {
+  display: block;
+  width: 100%;
+  height: 94%;
+}
+.container .footer {
+  text-align: center;
+}
+

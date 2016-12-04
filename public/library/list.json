@@ -1,0 +1,35 @@
+{
+    "说明文档": {
+        "name": "说明文档",
+        "filename": "dialog.html",
+        "folder": "说明文档",
+        "imgUrl": "../img/product1.jpg",
+        "css": true,
+        "js": true,
+        "des": "这是描述",
+        "download": "download",
+        "detail": "detail"
+    },
+    "弹层动效": {
+        "name": "弹层动效",
+        "filename": "index.html",
+        "folder": "弹层动效",
+        "imgUrl": "../img/product1.jpg",
+        "css": true,
+        "js": true,
+        "des": "这是描述",
+        "download": "download",
+        "detail": "detail"
+    },
+    "snow": {
+        "name": "snow",
+        "filename": "index.html",
+        "folder": "snow",
+        "imgUrl": "../img/product1.jpg",
+        "css": true,
+        "js": true,
+        "des": "这是描述",
+        "download": "download",
+        "detail": "detail"
+    }
+}

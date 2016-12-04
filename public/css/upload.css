@@ -1,0 +1,136 @@
+/**
+ * 上传模块样式表
+ */
+.upload .btn-upload,
+.upload .btn-open {
+  line-height: 1.5;
+  position: relative;
+  z-index: -1;
+  display: inline-block;
+  overflow: hidden;
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #49be38;
+}
+.upload .btn-upload .icon-pen,
+.upload .btn-open .icon-pen {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -6px;
+  margin-right: 6px;
+  vertical-align: text-top;
+}
+.upload .btn-upload .icon-pen img,
+.upload .btn-open .icon-pen img {
+  max-width: 100%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+.upload .btn-open {
+  z-index: 1;
+}
+.upload .btn-upload {
+  transition: opacity .2s linear,transform .3s linear;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.upload .box-upload {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+  transition: max-height 0.4s linear;
+  background: rgba(255, 255, 255, 0.2);
+}
+.upload .box-upload input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+}
+.upload .box-upload .input {
+  display: none;
+}
+.upload .box-upload .uploadArea {
+  position: relative;
+  cursor: pointer;
+}
+.upload .box-upload .uploadArea .drag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.upload .box-upload .preview {
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 20px;
+  max-height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.upload .box-upload .preview .upload_append_list {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 10%;
+  background: rgba(100, 100, 100, 0.4);
+}
+.upload .box-upload .preview .upload_append_list figure {
+  width: 100%;
+  height: 100%;
+}
+.upload .box-upload .preview .upload_append_list figcaption {
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  transition: opacity .2s linear;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+}
+.upload .box-upload .preview .upload_append_list .upload_image {
+  width: 100%;
+  height: 100%;
+}
+.upload .box-upload .preview .upload_append_list.file figure,
+.upload .box-upload .preview .upload_append_list:hover figure {
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+.upload .box-upload .preview .upload_append_list.file figcaption,
+.upload .box-upload .preview .upload_append_list:hover figcaption {
+  opacity: 1;
+}
+.upload .box-upload .btn-option .submit {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #fff;
+}
+.upload.active .box-upload {
+  max-height: 600px;
+}
+.upload.active .btn-upload {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}

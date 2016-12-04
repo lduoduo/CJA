@@ -1,0 +1,166 @@
+/**
+ * 上传模块样式表
+ */
+.upload {
+    .btn-upload,.btn-open {
+        line-height: 1.5;
+
+        position: relative;
+        z-index: -1;
+
+        display: inline-block;
+        overflow: hidden;
+
+        margin: 5px;
+        padding: 5px 10px;
+
+        cursor: pointer;
+
+        color: #fff;
+        background-color: #49be38;
+        .icon-pen {
+            display: inline-block;
+
+            width: 2rem;
+            height: 2rem;
+            margin-top: -6px;
+            margin-right: 6px;
+
+            vertical-align: text-top;
+            img {
+                max-width: 100%;
+
+                filter: invert(1);
+            }
+        }
+    }
+    .btn-open{
+        z-index: 1;
+    }
+    .btn-upload {
+        transition: opacity .2s linear,transform .3s linear;
+        transform: translateX(-100px);
+
+        opacity: 0;
+    }
+    .box-upload {
+        position: relative;
+
+        overflow: hidden;
+
+        width: 100%;
+        max-height: 0;
+
+        transition: max-height .4s linear;
+
+        background: rgba(255,255,255,.2);
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+
+            color: #fff;
+            border: 2px solid rgba(255,255,255,.3);
+            background: transparent;
+        }
+        .input {
+            display: none;
+        }
+        .uploadArea {
+            position: relative;
+            // width: 100%;
+            // height: 100%;
+
+            cursor: pointer;
+            .drag {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .preview {
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            min-height: 20px;
+            max-height: 500px;
+            // width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+
+            border: 2px solid rgba(255,255,255,.3);
+            border-top: none;
+
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .upload_append_list {
+                position: relative;
+
+                display: inline-block;
+                overflow: hidden;
+
+                width: 90px;
+                height: 90px;
+                margin: 10px;
+
+                border-radius: 10%;
+                background: rgba(100,100,100,.4);
+                figure {
+                    width: 100%;
+                    height: 100%;
+                }
+                figcaption {
+                    font-size: 12px;
+
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0;
+
+                    width: 100%;
+
+                    transition: opacity .2s linear;
+                    text-align: center;
+
+                    opacity: 0;
+                    color: #fff;
+                }
+                .upload_image {
+                    width: 100%;
+                    height: 100%;
+                }
+                &.file,&:hover {
+                    figure {
+                        filter: blur(8px);
+                    }
+                    figcaption {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .btn-option {
+            .submit {
+                display: inline-block;
+
+                padding: 10px 15px;
+
+                background: #fff;
+            }
+        }
+    }
+    &.active {
+        .box-upload {
+            max-height: 600px;
+        }
+        .btn-upload {
+            transform: translateX(0);
+
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+}

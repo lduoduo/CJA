@@ -1,0 +1,87 @@
+/**
+ * demo详情页公用样式表
+ */
+/**
+ * 公用侧边头部样式
+ */
+.sidebar {
+  max-width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  -ms-flex: 2;
+      flex: 2;
+}
+.sidebar .navbar-item {
+  line-height: 3;
+  display: inline-block;
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar .navbar-item.active {
+  background-color: #e78170;
+}
+.sidebar .navbar-item img {
+  max-width: 55%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    height: 8vh;
+  }
+  .navbar-item {
+    overflow: hidden;
+    height: 100% !important;
+  }
+  .navbar-item img {
+    margin-top: 5px!important;
+    max-width: 50%;
+  }
+}
+/**
+ * 公共尾部样式
+ */
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+}
+.sidebar {
+  background: rgba(0, 0, 0, 0.7);
+}
+.footer {
+  display: none;
+}
+.container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .show-case {
+  -ms-flex: 30;
+  flex: 30;
+  height: 100%;
+}
+.container .show-case .modules {
+  display: block;
+  width: 100%;
+  height: 94%;
+}
+.container .footer {
+  text-align: center;
+}

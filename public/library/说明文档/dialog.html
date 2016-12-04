@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>index</title>
+    <link rel="stylesheet" href="dialog.css">
+</head>
+
+<body>
+    <!-- main start -->
+    <h2>说明文档</h2>
+    <div class="warnning">
+        当前是duoduo的个人分支，谁都别动!!!
+        注意事项：
+        <p>1. 插件文件不要太多，js/css/html文件最好各不要超过2个，保持功能简单单一</p>
+        <p>2. 上传的时候只选择文件上传（文件夹是传不上去的），后台会自动生成文件 夹</p>
+        <p>3. 所有文件都统一在一个目录下，不要针对CSS/JS建文件夹，没有必要，而且服务端目前也不支持</p>
+        <p>4. demo页面请写明插件使用方法和注释, 并标明作者</p>
+        <p>5. 上传文件必须包含index.json和demo的html页面, index.json是配置文件，参数如下</p>
+        <pre>
+          {
+          "index": "index.html", //demo页面名字
+          "name":"test11", //可以忽略
+          "imgUrl":"../img/product1.jpg" //目前可以忽略
+        }
+        </pre>
+        <p>6. index.json文件里面不能有任何注释!!!</p>
+        <p>7. 未完待续。。。</p>
+        <h2>上传操作说明</h2>
+        <p>点击我要上传按钮，弹出区域，直接点击或者拖动文件到该区域即可，项目名称必填</p>
+        <h2>更新日志，错误日志</h2>
+        <p>批量上传服务端代码问题：</p>
+        <div class="bg"></div>
+    </div>
+    <!-- main end -->
+    <!-- scripts start -->
+    <script src="dialog.js"></script>
+    <!-- scripts end -->
+</body>
+
+</html>

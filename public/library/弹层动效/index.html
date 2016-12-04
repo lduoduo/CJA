@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css3弹层demos</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="tanceng2.css">
+	<link rel="stylesheet" type="text/css" href="tanceng3.css">
+	<script src="http://js.40017.cn/cn/csl/guoneiyou/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="touchMove.js"></script>
+	<!-- <script type="text/javascript" src="gnyTanCeng.js"></script> -->
+	<script type="text/javascript" src="tancengDemo2.js"></script>
+	<script type="text/javascript" src="tancengDemo3.js"></script>		
+	<script type="text/javascript" src="index.js"></script>	
+</head>
+<body>
+	<div class="demo">
+		<div class="container">
+			主要内容
+			<p class="dec" style="color:red;">注意：目前该页面的几个弹层不能在同一个页面同时使用；</p>
+			<p class="dec" style="color:red;">打开demo2后，刷新再打开demo3；</p>
+			<div class="dec">
+				<p>demo2:点击按钮打开弹层，点击x关闭弹层</p>
+				<p>注意：目前适用pc和手机，但不兼容ie8</p>
+				<p>使用方法：</p>
+				<p>第一步：</p>
+				<p>给需要使用该风格弹层的内容一个class为container的类名</p>
+				<p>第二步：</p>
+				<p>$('.demo2').click(function() {</p>
+				<p>var message = '标题';</p>
+				<p>var title = '内容';</p>	
+				<p>tancengDemo2.showTanCeng(message,title); </p>	
+				<p>});</p>
+			</div>
+			<div class="dec">
+				<p>demo3:点击按钮触发弹层后，鼠标滑上页面出现弹层内容，滑出消失弹层</p>
+				<p>注意：目前只适用pc，但不兼容ie8，也不适用手机</p>
+				<p>使用方法：</p>
+				<p>$('.demo3').click(function() {</p>
+				<p>var message = '标题';</p>
+				<p>var title = '内容';</p>	
+				<p>tancengDemo3.showTanCeng(message,title); </p>	
+				<p>});</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<!-- <button class="demo1">demo1</button> -->
+		<button class="demo2">demo2</button>
+		<button class="demo3">demo3</button>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/**
+ * 公用侧边头部样式
+ */
+.sidebar {
+    max-width: 50px;
+    height: 100%;
+
+    background: rgba(255,255,255,.2);
+
+    flex: 2;
+    .navbar-item {
+        line-height: 3;
+
+        display: inline-block;
+
+        width: 100%;
+        height: 3rem;
+
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+
+        color: #fff;
+        &.active {
+            background-color: #e78170;
+        }
+        img {
+            max-width: 55%;
+
+            filter: invert(1);
+            margin-top: 10px;
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+
+        display: flex;
+
+        width: 100%;
+        max-width: 768px;
+            height: 8vh;
+    }
+    .navbar-item {
+        overflow: hidden;
+
+        height: 100% !important;
+        img {
+            margin-top: 5px!important;
+            max-width: 50%;
+        }
+    }
+}

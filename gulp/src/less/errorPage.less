@@ -1,0 +1,31 @@
+/**
+ * 错误页面样式表
+ */
+
+@import url("./sidebar");
+@import url("./footer");
+@import url("./header"); 
+@import url("./common");
+
+.container {
+	position: relative;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	.error-page {
+		flex:30;
+		background: url(../img/cry2.jpg) no-repeat;
+		background-position: center;
+		background-size: 20%;
+		.title {
+			text-align: center;
+			margin-top: 10%;
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+	.footer {
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+}

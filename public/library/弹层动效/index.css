@@ -1,0 +1,24 @@
+.demo {
+  perspective: 1800px;
+  width: 100%;
+  text-align: center;
+}
+.container {
+  background-color: yellow;
+}
+.container .dec {
+  padding-left: 2em;
+  text-align: left;
+  font-size: 0.4em;
+}
+footer {
+  position: absolute;
+  z-index: 10;
+}
+footer button {
+  font-size: 3em;
+  cursor: pointer;
+}
+footer .demo3 {
+  display: none;
+}

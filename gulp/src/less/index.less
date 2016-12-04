@@ -1,0 +1,121 @@
+/**
+ * 首页样式表
+ */
+@import url('./sidebar');
+@import url('./footer');
+@import url('./effectlist');
+@import url('./backtop');
+@import url('./upload');
+@import url('./assist');
+
+
+a {
+    text-decoration: none;
+
+    color: currentColor;
+}
+body.container {
+    position: relative;
+
+    display: flex;
+    overflow-y: hidden;
+
+    width: 100vw;
+    min-width: 1024px;
+    height: 100vh;
+
+    background: url('../img/wolfs.jpg') no-repeat;
+    background-size: cover;
+}
+
+.main {
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    height: 100vh;
+    padding-bottom: 2rem;
+
+    background: rgba(255, 255, 255, .1);
+
+    flex: 30;
+    .navbar {
+        line-height: 4;
+
+        position: fixed;
+        z-index: 99;
+
+        width: 74.1%;
+        height: 4rem;
+        padding-left: 2rem;
+
+        border-bottom: 2px solid #fff;
+        .navbar-item {
+            display: inline-block;
+
+            height: 2rem;
+
+            text-align: center;
+            text-decoration: none;
+
+            color: #fff;
+        }
+        .line {
+            display: inline-block;
+
+            width: 2px;
+            height: 2rem;
+            margin: 0 1rem;
+
+            vertical-align: middle;
+
+            background-color: #fff;
+        }
+        .search {
+            float: right;
+
+            height: 2rem;
+            margin-top: 1rem;
+            margin-right: 3rem;
+            padding: 0 1.5rem;
+
+            border: none;
+            border-radius: 1rem;
+            outline: none;
+            &::placeholder {
+                color: #e44;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        display: block !important;
+
+        min-width: 0 !important;
+    }
+    .main {
+        overflow-y: hidden;
+
+        height: 92vh;
+        padding-bottom: 0;
+        .navbar {
+            position: relative;
+
+            display: flex;
+
+            width: 100%;
+            height: 8vh;
+            padding-left: 0;
+            .navbar-item {
+                flex: 1;
+            }
+            .line {
+                margin: 15px 1rem;
+            }
+            .search {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+    <div class="navbar">
+        <a href="" class="navbar-item active">CSS Animation</a>
+        <i class="line"></i>
+        <a href="" class="navbar-item">Components</a>
+        <input class="search" type="search" placeholder="search name">
+    </div>
+    <ul class="effect-list">
+        <% for(var i in list) {%>
+           <li>
+                <img src="<%=list[i].imgUrl%>" alt="">
+                <h3>
+                    <a class="J-detail" href="detail?name=<%=list[i].folder%>"><%=list[i].name%></a>
+                </h3>
+                </div>
+            </li>
+        <% } %>
+    </ul>

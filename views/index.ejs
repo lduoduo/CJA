@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%include ./include/head %>
+    <link href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body class="container">
+    <!-- header -->
+    <%include include/header %>
+
+    <div class="assist">
+        <%include ./include/footer %>
+        <%include ./include/upload %>
+    </div>
+
+    <main class="main">
+        <% include ./include/effectlist %>
+        <% include ./include/backtop %>
+    </main>
+
+    <!-- footer -->
+    <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script type="text/javascript" src="js/fileupload.js"></script>
+    <script type="text/javascript" src="js/myupload.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

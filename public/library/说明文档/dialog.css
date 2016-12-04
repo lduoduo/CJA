@@ -1,0 +1,6 @@
+.bg{
+	background: url('doge.png');
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+}

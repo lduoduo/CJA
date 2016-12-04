@@ -1,0 +1,44 @@
+/**
+ * 首页列表样式表
+ */
+.effect-list {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  /* justify-content: space-around; */
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.effect-list li {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  opacity: .9;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+.effect-list li img {
+  max-width: 100%;
+}
+.effect-list li h3 {
+  line-height: 2;
+  border-top: 2px solid #fff;
+}
+@media screen and (max-width: 767px) {
+  .effect-list {
+    display: block;
+    overflow-y: auto;
+    max-height: 84vh;
+    padding: 0 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .effect-list li {
+    width: 90vw;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,390 @@
+/**
+ * 首页样式表
+ */
+/**
+ * 公用侧边头部样式
+ */
+.sidebar {
+  max-width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  -ms-flex: 2;
+      flex: 2;
+}
+.sidebar .navbar-item {
+  line-height: 3;
+  display: inline-block;
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar .navbar-item.active {
+  background-color: #e78170;
+}
+.sidebar .navbar-item img {
+  max-width: 55%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    height: 8vh;
+  }
+  .navbar-item {
+    overflow: hidden;
+    height: 100% !important;
+  }
+  .navbar-item img {
+    margin-top: 5px!important;
+    max-width: 50%;
+  }
+}
+/**
+ * 公共尾部样式
+ */
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+}
+/**
+ * 首页列表样式表
+ */
+.effect-list {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  /* justify-content: space-around; */
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.effect-list li {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  opacity: .9;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+.effect-list li img {
+  max-width: 100%;
+}
+.effect-list li h3 {
+  line-height: 2;
+  border-top: 2px solid #fff;
+}
+@media screen and (max-width: 767px) {
+  .effect-list {
+    display: block;
+    overflow-y: auto;
+    max-height: 84vh;
+    padding: 0 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .effect-list li {
+    width: 90vw;
+    margin: 10px 0;
+  }
+}
+/**
+ * 返回顶部样式
+ */
+.back-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  text-align: center;
+  line-height: 4;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+.back-top:hover {
+  border: 4px solid #2C2727;
+}
+/**
+ * 上传模块样式表
+ */
+.upload .btn-upload,
+.upload .btn-open {
+  line-height: 1.5;
+  position: relative;
+  z-index: -1;
+  display: inline-block;
+  overflow: hidden;
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #49be38;
+}
+.upload .btn-upload .icon-pen,
+.upload .btn-open .icon-pen {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -6px;
+  margin-right: 6px;
+  vertical-align: text-top;
+}
+.upload .btn-upload .icon-pen img,
+.upload .btn-open .icon-pen img {
+  max-width: 100%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+.upload .btn-open {
+  z-index: 1;
+}
+.upload .btn-upload {
+  transition: opacity .2s linear,transform .3s linear;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.upload .box-upload {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+  transition: max-height 0.4s linear;
+  background: rgba(255, 255, 255, 0.2);
+}
+.upload .box-upload input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+}
+.upload .box-upload .input {
+  display: none;
+}
+.upload .box-upload .uploadArea {
+  position: relative;
+  cursor: pointer;
+}
+.upload .box-upload .uploadArea .drag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.upload .box-upload .preview {
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 20px;
+  max-height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.upload .box-upload .preview .upload_append_list {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 10%;
+  background: rgba(100, 100, 100, 0.4);
+}
+.upload .box-upload .preview .upload_append_list figure {
+  width: 100%;
+  height: 100%;
+}
+.upload .box-upload .preview .upload_append_list figcaption {
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  transition: opacity .2s linear;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+}
+.upload .box-upload .preview .upload_append_list .upload_image {
+  width: 100%;
+  height: 100%;
+}
+.upload .box-upload .preview .upload_append_list.file figure,
+.upload .box-upload .preview .upload_append_list:hover figure {
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+.upload .box-upload .preview .upload_append_list.file figcaption,
+.upload .box-upload .preview .upload_append_list:hover figcaption {
+  opacity: 1;
+}
+.upload .box-upload .btn-option .submit {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #fff;
+}
+.upload.active .box-upload {
+  max-height: 600px;
+}
+.upload.active .btn-upload {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+/**
+ * 辅助模块，首页中间的模块
+ */
+.assist {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  -ms-flex: 6;
+      flex: 6;
+  height: 100%;
+  padding: 0 10px;
+  min-width: 300px;
+}
+.assist > :first-child {
+  margin-bottom: 1rem;
+}
+.assist > :not(:first-child) {
+  margin-bottom: 2rem;
+}
+.assist .footer {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .assist {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+body.container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  width: 100vw;
+  min-width: 1024px;
+  height: 100vh;
+  background: url('../img/wolfs.jpg') no-repeat;
+  background-size: cover;
+}
+.main {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  -ms-flex: 30;
+      flex: 30;
+}
+.main .navbar {
+  line-height: 4;
+  position: fixed;
+  z-index: 99;
+  width: 74.1%;
+  height: 4rem;
+  padding-left: 2rem;
+  border-bottom: 2px solid #fff;
+}
+.main .navbar .navbar-item {
+  display: inline-block;
+  height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.main .navbar .line {
+  display: inline-block;
+  width: 2px;
+  height: 2rem;
+  margin: 0 1rem;
+  vertical-align: middle;
+  background-color: #fff;
+}
+.main .navbar .search {
+  float: right;
+  height: 2rem;
+  margin-top: 1rem;
+  margin-right: 3rem;
+  padding: 0 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+}
+.main .navbar .search::-webkit-input-placeholder {
+  color: #e44;
+}
+.main .navbar .search::-moz-placeholder {
+  color: #e44;
+}
+.main .navbar .search:-ms-input-placeholder {
+  color: #e44;
+}
+.main .navbar .search::placeholder {
+  color: #e44;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    display: block !important;
+    min-width: 0 !important;
+  }
+  .main {
+    overflow-y: hidden;
+    height: 92vh;
+    padding-bottom: 0;
+  }
+  .main .navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    padding-left: 0;
+  }
+  .main .navbar .navbar-item {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .main .navbar .line {
+    margin: 15px 1rem;
+  }
+  .main .navbar .search {
+    display: none;
+  }
+}
